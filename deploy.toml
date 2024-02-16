@@ -41,16 +41,25 @@ metaDataFormat= "yaml"
 
  # Social icons
   [[params.social]]
-    name = "github"
-    url  = "https://github.com/YannisZa"
-
-  [[params.social]]
     name = "email"
     url  = "mailto:yzachos@gmail.com"
 
   [[params.social]]
     name = "linkedin"
     url  = "https://www.linkedin.com/in/izachos/"
+
+    [[params.social]]
+    name = "github"
+    url  = "https://github.com/YannisZa"
+
+    [[params.social]]
+    name = "google_scholar"
+    url = "https://scholar.google.com/citations?user=GfymnikAAAAJ&hl=en"
+
+  [[params.social]]
+    name = "orcid"
+    url = "https://orcid.org/0000-0002-7503-2117"
+
 
 [params.style]
   # add path to custom CSS files here
@@ -59,25 +68,21 @@ metaDataFormat= "yaml"
   custom_scss = []
 
 [menu]
-  [[menu.main]]
-    identifier = "about"
-    name       = "About"
-    url        = "about"
 
   [[menu.main]]
     identifier = "news"
     name       = "News"
     url        = "news/"
-    
-  [[menu.main]]
-    identifier = "cv"
-    name       = "CV"
-    url        = "files/CV.pdf"
 
   [[menu.main]]
     identifier = "research"
     name       = "Research"
     url        = "research/"
+
+  [[menu.main]]
+    identifier = "cv"
+    name       = "CV"
+    url        = "files/CV.pdf"
 
   [[menu.main]]
     identifier = "reading"

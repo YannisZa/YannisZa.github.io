@@ -195,6 +195,36 @@ li {
   margin: auto;
 }
 
+.shortbio {
+  margin: auto;
+  display: flex;
+  align-items: flex-start;
+  text-align: left;
+  vertical-align: top;
+  max-width: 1000px;
+}
+
+.education,
+.research_interests,
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align items to the start */
+  margin: 0 20px; /* Adjust margin for spacing between sections */
+}
+
+.education {
+  width: 41%;
+}
+
+.research_interests {
+  width: 26%;
+}
+
+.skills {
+  width: 30%;
+}
+
 .intro {
   margin: auto;
   display: flex;
@@ -489,4 +519,25 @@ tfoot th {
 
 tfoot td {
   font-weight: bold;
+}
+
+/* Define your custom styles for the education section */
+.education-list {
+  list-style: none;
+  padding: 0;
+}
+
+.education-item {
+  margin-bottom: 20px;
+}
+
+.university-icon {
+  // display: flex;
+  // justify-content: center;
+  width: 10%; /* Set the width of the icons */
+  height: auto;
+  // margin-left: auto;
+  margin-right: 1px;
+  text-align: center;
+  vertical-align: middle;
 }
