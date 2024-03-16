@@ -1,4 +1,5 @@
 +++
+layout = "research"
 title = "Table inference for combinatorial origin-destination choices in agent-based population synthesis"
 date = "2023-07-14"
 imageURL = "/img/table_inference_paper.png"

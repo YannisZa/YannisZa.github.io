@@ -3,3 +3,20 @@
 * {
   font-family: "Lato", Arial;
 }
+
+.a2a_button {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  background-color: #000; /* Default dark color */
+  border-radius: 50%;
+}
+
+/* Dark theme media query */
+@media (prefers-color-scheme: dark) {
+  .addtoany .a2a_button {
+    background-color: #fff; /* Change to white in dark mode */
+    color: #000; /* Change text color to black in dark mode */
+  }
+}

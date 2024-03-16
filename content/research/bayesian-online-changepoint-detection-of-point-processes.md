@@ -1,6 +1,5 @@
 +++
 layout = "research"
-
 title = "Bayesian online changepoint detection of point processes"
 subtitle = "Change; how much of it is happening?"
 date = "2018-06-28"
@@ -19,4 +18,5 @@ Well, there is an obvious philosophical take on that question, which however int
 
 I decided to take on the task of answering that question as part of my final year undergraduate thesis, which was supervised by [Dr. Theodoros Damoulas.](https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/damoulas/) My focus was on developing an Bayesian online changepoint detection framework for discrete data generating processes (point processes).
  -->
+
 You can **read my entire thesis [here.](./files/dissertation.pdf)**

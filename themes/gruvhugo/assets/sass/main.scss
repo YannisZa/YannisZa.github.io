@@ -9,7 +9,7 @@ body {
   margin: 0;
   padding: 0;
   background: $light-color;
-  color: #454545;
+  color: $dark-color;
   font-size: calc(1em + 0.22vw);
   box-sizing: border-box;
   line-height: 1.4;
@@ -58,6 +58,13 @@ sup a {
   border-style: dotted;
   text-decoration: none;
   color: $primary-accent-color;
+}
+
+.dark .link,
+.dark a {
+  color: gray;
+  background-color: transparent;
+  text-decoration: none;
 }
 
 .content {
@@ -482,8 +489,6 @@ ul li p {
 }
 
 table {
-  border-collapse: collapse;
-  border: 1px solid black;
   font-size: calc(0.5em + 0.33vw);
   letter-spacing: 1px;
 }
@@ -507,10 +512,6 @@ td {
 
 td:last-of-type {
   text-align: left;
-}
-
-tbody > tr:nth-of-type(even) {
-  background-color: white;
 }
 
 tfoot th {

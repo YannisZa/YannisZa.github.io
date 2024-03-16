@@ -13,11 +13,11 @@ title = "News"
   </tr> -->
   <tr>
     <td>March 2024</td>
-    <td> Read our <a href="https://medium.com/@yzachos", target="_blank"><i>article on Medium</i></a> about the release of our new Python package for generating Neural Spatial Interaction Tables. </td>
+    <td>Read our <a href="https://medium.com/@yzachos", target="_blank"><i>article on Medium</i></a> about the release of our new Python package for generating Neural Spatial Interaction Tables. </td>
   </tr>
   <tr>
     <td>January 2024</td>
-    <td> Our paper <a href="https://onlinelibrary.wiley.com/doi/10.1002/sta4.656", target="_blank"><i>Table Inference for Combinatorial Origin-Destination Choices in Agent-based Population Synthesis</i></a> has been accepted to Stat!</td>
+    <td>Our paper<a href="https://onlinelibrary.wiley.com/doi/10.1002/sta4.656", target="_blank"><i>Table Inference for Combinatorial Origin-Destination Choices in Agent-based Population Synthesis</i></a> has been accepted to Stat!</td>
   </tr>
   <tr>
     <td>November 2022</td>
@@ -28,9 +28,8 @@ title = "News"
     <td>Submitted my first year report on "Model assessment of constitutive laws in traffic PDEs"</a>.</td>
   </tr>
   <tr>
-  <tr>
     <td>August 2020</td>
-    <td>Read my MRes thesis on stochastic modelling of urban travel demand <a href="./research/stochastic-modelling-of-urban-travel-demand/", target="_blank">here</a>.</td>
+    <td>Read my MRes thesis on stochastic modelling of urban travel demand <a href="../research/stochastic-modelling-of-urban-travel-demand/", target="_blank">here</a>.</td>
   </tr>
   <tr>
     <td>April 2020</td>
@@ -38,10 +37,10 @@ title = "News"
   </tr>
   <tr>
     <td>January 2020</td>
-    <td>Read my mini-project on Bayesian inversion of hydrological models <a href="./research/introduction-to-bayesian-hydrological-modelling/", target="_blank">here</a>.</td>
+    <td>Read my mini-project on Bayesian inversion of hydrological models <a href="../research/bayesian-hydrological-modelling/", target="_blank">here</a>.</td>
   </tr>
   <tr>
     <td>June 2018</td>
-    <td>Read my undergraduate thesis on Bayesian online changepoint detection of point processes <a href="./research/bayesian-online-changepoint-detection-of-point-processes/", target="_blank">here</a>.</td>
+    <td>Read my undergraduate thesis on Bayesian online changepoint detection of point processes <a href="../research/bayesian-online-changepoint-detection-of-point-processes/", target="_blank">here</a>.</td>
   </tr>
 </table>

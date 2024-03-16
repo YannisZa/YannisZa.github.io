@@ -64,6 +64,8 @@ metaDataFormat= "yaml"
 [params.style]
   # add path to custom CSS files here
   custom_css = ['css/style.css']
+  # add path to custom Javascript files here
+  custom_js = ['js/share.js']
   # add path to custom SCSS files here
   custom_scss = []
 

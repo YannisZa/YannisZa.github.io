@@ -1,26 +1,140 @@
 {{define "main"}}
 <br />
-<div style="display: flex; align-items: center">
-  <a class="go-back" href="{{ .Site.BaseURL }}"
+<div class="page-header a2a_kit a2a_kit_size_26 a2a_default_style">
+  <a class="go-back" href="{{.Site.BaseURL}}"
     ><svg
       aria-hidden="true"
       focusable="false"
       data-prefix="far"
       class="back-icon"
       data-icon="caret-square-left"
-      height="25px"
+      height="24px"
+      role="img"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 576 512">
+      <path
+        fill="currentColor"
+        d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+    </svg>
+  </a>
+  <a class="go-back" href="javascript:history.back(1)"
+    ><svg
+      aria-hidden="true"
+      focusable="false"
+      data-prefix="far"
+      class="back-icon"
+      data-icon="caret-square-left"
+      height="29px"
       role="img"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 448 512">
       <path
         fill="currentColor"
-        d="M272 157.1v197.8c0 10.7-13 16.1-20.5 8.5l-98.3-98.9c-4.7-4.7-4.7-12.2 0-16.9l98.3-98.9c7.5-7.7 20.5-2.3 20.5 8.4zM448 80v352c0 26.5-21.5 48-48 48H48c-26.5 0-48-21.5-48-48V80c0-26.5
-						21.5-48 48-48h352c26.5 0 48 21.5 48 48zm-48 346V86c0-3.3-2.7-6-6-6H54c-3.3 0-6 2.7-6 6v340c0 3.3 2.7 6 6
-						6h340c3.3 0 6-2.7 6-6z"></path>
+        d="M0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416zM128 256c0-6.7 2.8-13 7.7-17.6l112-104c7-6.5 17.2-8.2 25.9-4.4s14.4 12.5 14.4 22l0 208c0 9.5-5.7 18.2-14.4 22s-18.9 2.1-25.9-4.4l-112-104c-4.9-4.5-7.7-10.9-7.7-17.6z" />
     </svg>
   </a>
-  <h2 class="page-title">{{.Title}}</h2>
+  <a
+    class="a2a_dd"
+    href="https://www.addtoany.com/share?url={{.Site.BaseURL}}"></a>
+  <script>
+    var a2a_config = a2a_config || {};
+    a2a_config.onclick = 1;
+    if (localStorage.getItem("theme") === "dark") {
+      a2a_config.icon_color = "gray,unset";
+    } else if (localStorage.getItem("theme") === "light") {
+      a2a_config.icon_color = "black,white";
+    }
+    a2a_config.prioritize = ["copy_link", "email", "x", "threads"];
+    a2a_config.exclude_services = [
+      "amazon_wish_list",
+      "aol_mail",
+      "balatarin",
+      "bibsonomy",
+      "blogger",
+      "blogmarks",
+      "bookmarks_fr",
+      "box_net",
+      "buffer",
+      "diary_ru",
+      "diaspora",
+      "digg",
+      "diigo",
+      "douban",
+      "draugiem",
+      "evernote",
+      "facebook",
+      "fark",
+      "flipboard",
+      "folkd",
+      "google_gmail",
+      "google_classroom",
+      "google_translate",
+      "hacker_news",
+      "hatena",
+      "houzz",
+      "instapaper",
+      "kakao",
+      "known",
+      "line",
+      "linkedin",
+      "livejournal",
+      "mail_ru",
+      "mastodon",
+      "mendeley",
+      "meneame",
+      "facebook_messenger",
+      "sms",
+      "mewe",
+      "mix",
+      "mixi",
+      "myspace",
+      "odnoklassniki",
+      "outlook_com",
+      "papaly",
+      "pinboard",
+      "pinterest",
+      "plurk",
+      "pocket",
+      "print",
+      "printfriendly",
+      "pusha",
+      "kindle_it",
+      "qzone",
+      "raindrop_io",
+      "reddit",
+      "rediff",
+      "mypage",
+      "refind",
+      "sina_weibo",
+      "sitejot",
+      "skype",
+      "slashdot",
+      "snapchat",
+      "stocktwits",
+      "svejo",
+      "symbaloo_bookmarks",
+      "microsoft_teams",
+      "telegram",
+      "threema",
+      "trello",
+      "tumblr",
+      "twiddla",
+      "twitter",
+      "typepad_post",
+      "viber",
+      "vk",
+      "wechat",
+      "whatsapp",
+      "wordpress",
+      "wykop",
+      "xing",
+      "yahoo_mail",
+      "yummly",
+    ];
+  </script>
+  <script async src="https://static.addtoany.com/menu/page.js"></script>
 </div>
+<h2>{{.Title}}</h2>
 <!-- List all tags -->
 {{if eq .Kind "taxonomyTerm"}} {{range $key, $value :=
 .Data.Terms.Alphabetical}}

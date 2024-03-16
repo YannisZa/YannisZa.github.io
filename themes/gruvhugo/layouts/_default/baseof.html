@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Params.main.lang }}">
-    {{- partial "head.html" . -}}
-    <body>
-      <div class="line" id="scrollIndicator"></div>
-      <div class="main">
-          {{- partial "header.html" . -}}        
-	  {{- block "main" . }}{{- end }}
-          {{- partial "footer.html" . -}}
-      </div>
-    </body>
+  {{- partial "head.html" . -}}
+  <body>
+    <div class="line" id="scrollIndicator"></div>
+    <div class="main">
+      {{- partial "header.html" . -}} {{- block "main" . }}{{- end }} {{-
+      partial "footer.html" . -}}
+    </div>
+    {{ partial "assets.html" . }}
+  </body>
 </html>

@@ -7,4 +7,3 @@ view = "1"
 +++
 
 <!-- {{< figure src="/img/yannis_research.jpg" width="800" >}} -->
-

@@ -75,7 +75,7 @@ metaDataFormat= "yaml"
     url        = "news/"
 
   [[menu.main]]
-    identifier = "research"
+    identifier = "Research"
     name       = "Research"
     url        = "research/"
 
