@@ -1,7 +1,7 @@
-<footer id="footer">
-    <strong>{{- with .Site.Params.social }}</strong>
-    <div class="social">
-        {{ partial "social.html" . }}
-    </div><strong>{{- end }}</strong>
-    <p style="color:grey;">{{ .Site.Params.main.copyright | safeHTML }}</p>
-</footer>
+<!-- <a onclick="topFunction()" id="gotopbutton" title="Go to top"> -->
+<!-- <footer id="footer"> -->
+<div class="gotopbutton">
+  <a onclick="topFunction()" title="Go to top">Go up</a>
+  <script src="{{ .Site.BaseURL }}js/gototop.js"></script>
+  <!-- </footer> -->
+</div>

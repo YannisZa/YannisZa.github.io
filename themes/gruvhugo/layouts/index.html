@@ -1,5 +1,5 @@
 {{define "main"}}
-<div class="intro" style="align-items: center">
+<div class="intro">
   {{if .Site.Params.main.enabled }}
   <img
     class="image"
@@ -8,7 +8,10 @@
     width="200px"
     alt="Author's picture or avatar or logo" />
   <ul>
-    <li class="intro-quote">{{ .Site.Params.main.quote }}</li>
+    <li class="intro-name-title">
+      <h3>{{ .Site.Params.main.name }}</h3>
+      <em><h6>{{ .Site.Params.main.title }}</h6></em>
+    </li>
   </ul>
   {{end}}
   <p>{{ .Site.Params.main.description | safeHTML }}</p>
@@ -69,4 +72,4 @@
     </ul>
   </div>
 </div>
-{{ partial "menu.html" . }} {{end}}
+{{end}}

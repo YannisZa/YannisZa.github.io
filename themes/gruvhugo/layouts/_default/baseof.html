@@ -4,9 +4,9 @@
   <body>
     <div class="line" id="scrollIndicator"></div>
     <div class="main">
-      {{- partial "header.html" . -}} {{- block "main" . }}{{- end }} {{-
-      partial "footer.html" . -}}
+      {{- partial "header.html" . -}} {{- block "main" . }}{{- end }}
     </div>
     {{ partial "assets.html" . }}
   </body>
+  {{ partial "footer.html" . }}
 </html>

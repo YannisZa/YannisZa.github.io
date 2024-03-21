@@ -1,10 +1,17 @@
-<div class="title">
-  <div class="name">
-    <h2>
-      <a href="{{.Site.BaseURL}}" style="text-decoration: none; color: inherit"
-        >{{ .Site.Params.main.headerTitle }}</a
-      >
-    </h2>
+<!-- <div class="name">
+  <a href="{{.Site.BaseURL}}" style="text-decoration: none; color: inherit"
+    ><h2>{{ .Site.Params.main.headerTitle }}</h2>
+  </a>
+</div> -->
+<div class="topbar">
+  <strong>{{- with .Site.Params.social }}</strong>
+  <div class="social">{{ partial "social.html" . }}</div>
+  <strong>{{- end }}</strong>
+  <div class="vl"></div>
+  <div class="nav">
+    {{- $currentPage := . -}} {{ range .Site.Menus.main -}}
+    <a href="{{ .URL | absLangURL }}">{{ .Name }}</a>
+    {{- end }}
   </div>
   <div class="color-scheme">
     <input type="checkbox" class="checkbox" id="chk" />
