@@ -20,3 +20,28 @@
     color: #000; /* Change text color to black in dark mode */
   }
 }
+
+/* Light theme media query */
+@media (prefers-color-scheme: light) {
+  .addtoany .a2a_button {
+    color: #fff; /* Change to white in dark mode */
+    background-color: #000; /* Change text color to black in dark mode */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Stretch items to full width */
+  }
+
+  .social,
+  .nav,
+  .color-scheme {
+    flex: 0 1 100%; /* Take full width on smaller screens */
+  }
+
+  .color-scheme {
+    margin-inline-start: 40%;
+  }
+}
