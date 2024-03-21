@@ -29,7 +29,7 @@ title = "News"
   </tr>
   <tr>
     <td>August 2020</td>
-    <td>Read my MRes thesis on stochastic modelling of urban travel demand <a href="../research/stochastic-modelling-of-urban-travel-demand/", target="_blank">here</a>.</td>
+    <td>Read my MRes thesis on stochastic modelling of urban travel demand <a href="../research/stochastic-modelling-of-urban-travel-demand/">here</a>.</td>
   </tr>
   <tr>
     <td>April 2020</td>
@@ -37,10 +37,10 @@ title = "News"
   </tr>
   <tr>
     <td>January 2020</td>
-    <td>Read my mini-project on Bayesian inversion of hydrological models <a href="../research/bayesian-hydrological-modelling/", target="_blank">here</a>.</td>
+    <td>Read my mini-project on Bayesian inversion of hydrological models <a href="../research/bayesian-hydrological-modelling/">here</a>.</td>
   </tr>
   <tr>
     <td>June 2018</td>
-    <td>Read my undergraduate thesis on Bayesian online changepoint detection of point processes <a href="../research/bayesian-online-changepoint-detection-of-point-processes/", target="_blank">here</a>.</td>
+    <td>Read my undergraduate thesis on Bayesian online changepoint detection of point processes <a href="../research/bayesian-online-changepoint-detection-of-point-processes/">here</a>.</td>
   </tr>
 </table>
