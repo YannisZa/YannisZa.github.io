@@ -36,17 +36,87 @@ body.dark {
   padding: 3px 5px;
   border-radius: 3px;
 }
+.social-link {
+  font-size: 30px;
+}
 
-.title {
+.topbar {
+  max-width: 1000px;
+  margin: 0 auto;
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  text-align: center;
   align-items: center;
   justify-content: space-around;
+  overflow: visible;
+  position: relative;
+}
+
+.social,
+.nav,
+.color-scheme {
+  flex: 1 1 auto; /* Equal distribution of remaining space */
+  min-width: 0; /* Allow items to shrink */
+  margin: 20px auto; /* Adjust margin for spacing */
+  text-align: center;
+  align-items: center;
+  position: relative;
+  width: 40% auto;
+}
+
+.social {
+  margin: 5px;
+  text-align: center;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+    margin: 0;
+    color: $primary-accent-color;
+  }
+}
+
+.gotopbutton,
+.nav {
+  margin: 5px;
+  // margin: 20px 50px auto;
+  a {
+    background: $primary-accent-color;
+    background: linear-gradient(
+      90deg,
+      $primary-accent-color 0%,
+      $secondary-accent-color 100%
+    );
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$primary-accent-color",endColorstr="#0a8fa8",GradientType=1);
+    padding: 10px;
+    color: $light-color;
+    text-decoration: none;
+    border-radius: 3px;
+    margin: 5px;
+  }
+  a:hover {
+    background: #fff;
+    padding: 8px;
+    color: $primary-accent-color;
+    text-decoration: none;
+    border: 2px solid $primary-accent-color;
+    animation: blueToWhite 0.4s linear;
+  }
+}
+
+.color-scheme {
+  width: 20% auto;
+  margin-inline-start: 0; /* Reset margin for this div */
 }
 
 .name {
-  width: 80%;
   flex: 1;
-  text-align: left;
+  width: 33% auto;
+  float: left;
+  text-align: center;
+  align-items: center;
+  position: relative;
 }
 
 .link,
@@ -96,11 +166,12 @@ li {
   }
 }
 
-.color-scheme {
-  font-size: 15px;
-}
-
 .checkbox {
+  width: 33%;
+  float: left;
+  text-align: center;
+  align-items: center;
+  position: relative;
   opacity: 0;
   position: absolute;
 }
@@ -158,11 +229,13 @@ li {
   border-radius: 50px;
   cursor: pointer;
   display: flex;
+  margin-left: 66%;
   align-items: center;
+  float: left;
   justify-content: space-between;
   padding: 5px;
   height: 10px;
-  width: 40px;
+  width: 30px;
   transform: scale(1.5);
   margin-top: 10px;
   .ball {
@@ -184,7 +257,7 @@ li {
 }
 
 .checkbox:checked + .label .ball {
-  transform: translateX(28px);
+  transform: translateX(18px);
 }
 
 .fa-moon {
@@ -233,27 +306,42 @@ li {
 }
 
 .intro {
-  margin: auto;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   max-width: 1000px;
+  flex-wrap: wrap; /* Allow items to wrap to the next line */
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  overflow: visible;
+  position: relative;
 }
 
 .intro p {
   text-align: justify;
 }
 
-.intro-quote {
+.intro-name-title {
+  flex: 1 1 auto; /* Equal distribution of remaining space */
   list-style: none;
-  font-style: italic;
+  // font-style: italic;
+  font-size: calc(2em + 0.22vw);
+  height: 400px auto;
+  max-height: 1000px;
   text-align: center;
-  width: 400px;
+  text-align: left;
+  align-items: left;
+  position: relative;
 }
 
 .image {
-  width: 200px;
   border-radius: 200px;
-  margin: 10px;
+  flex: 1 1 auto; /* Equal distribution of remaining space */
+  height: 400px auto;
+  text-align: left;
+  align-items: left;
+  position: relative;
 }
 
 html.contrast body {
@@ -272,33 +360,8 @@ blockquote {
   margin-left: 0;
 }
 
-.nav {
-  margin: 20px auto;
-  a {
-    background: $primary-accent-color;
-    background: linear-gradient(
-      90deg,
-      $primary-accent-color 0%,
-      $secondary-accent-color 100%
-    );
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$primary-accent-color",endColorstr="#0a8fa8",GradientType=1);
-    padding: 10px;
-    color: $light-color;
-    text-decoration: none;
-    border-radius: 3px;
-    margin: 5px;
-  }
-  a:hover {
-    background: #fff;
-    padding: 8px;
-    color: $primary-accent-color;
-    text-decoration: none;
-    border: 2px solid $primary-accent-color;
-    animation: blueToWhite 0.4s linear;
-  }
-}
-
-.go-back {
+.go-back,
+.go-home {
   color: inherit;
   text-decoration: none;
   display: flex;
@@ -339,34 +402,14 @@ blockquote.dark {
   color: $light-color;
 }
 
-.social {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 20px 0px 0px 0px;
-  justify-content: space-between;
-  width: 80%;
-  a {
-    text-decoration: none;
-    margin: 0;
-    color: $primary-accent-color;
-  }
-}
-
-.social-link {
-  font-size: 30px;
-}
-
 #footer {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  border-right: 0px;
-  border-top: 2px solid;
-  border-left: 0px;
-  border-bottom: 0px;
-  margin: 20px auto auto auto;
+  border: none;
+  margin: 20px auto 20px auto;
   width: 100%;
   p {
     width: 90%;
@@ -374,26 +417,6 @@ blockquote.dark {
   }
   strong {
     width: 90%;
-  }
-  .copyleft {
-    margin: 10px 0px;
-    padding: 0;
-    font-size: calc(0.5em + 0.33vw);
-    list-style: none;
-    b {
-      display: inline-block;
-      transform: rotate(180deg);
-    }
-    li {
-      display: inline-block;
-      margin: 0 0 0 0.45em;
-      padding: 0 0 0 0.85em;
-      border-left: solid 1px rgba(255, 255, 255, 0.5);
-      line-height: 1;
-    }
-    li:first-child {
-      border-left: 0;
-    }
   }
 }
 
@@ -425,8 +448,7 @@ code {
   .page-header {
     flex-wrap: wrap;
   }
-  #footer p,
-  .intro-quote {
+  #footer p {
     width: 100%;
   }
   /* New styles for the image allocation */
@@ -455,10 +477,6 @@ code {
 .footnote-definition {
   display: flex;
   padding: 5px 0px;
-}
-
-.social {
-  width: 100%;
 }
 
 .footnote-body,
@@ -541,4 +559,19 @@ tfoot td {
   margin-right: 1px;
   text-align: center;
   vertical-align: middle;
+}
+
+.gotopbutton {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  border: none;
+  margin: 20px auto 20px auto;
+  width: 100%;
+  flex: 1 1 auto; /* Equal distribution of remaining space */
+  text-align: center;
+  align-items: center;
+  position: relative;
 }
