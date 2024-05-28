@@ -50,6 +50,11 @@
     document.body.classList.toggle("dark");
     localStorage.setItem("theme", theme);
     blockSwitcher();
+    // Dispatch custom event for theme change
+    const themeChangeEvent = new CustomEvent("themeChange", {
+      detail: theme,
+    });
+    document.dispatchEvent(themeChangeEvent);
   };
 
   const blockSwitcher = () =>
@@ -70,15 +75,15 @@
 
   document.getElementById("chk").addEventListener("change", styleSwapper);
 
-  window.addEventListener("scroll", () => {
-    let height =
-      document.documentElement.scrollHeight -
-      document.documentElement.clientHeight;
-    if (height >= 500) {
-      let winScroll =
-        document.body.scrollTop || document.documentElement.scrollTop;
-      let scrolled = (winScroll / height) * 100;
-      document.getElementById("scrollIndicator").style.width = scrolled + "%";
-    }
-  });
+  // window.addEventListener("scroll", () => {
+  //   let height =
+  //     document.documentElement.scrollHeight -
+  //     document.documentElement.clientHeight;
+  // if (height >= 500) {
+  //   let winScroll =
+  //     document.body.scrollTop || document.documentElement.scrollTop;
+  //   let scrolled = (winScroll / height) * 100;
+  // document.getElementById("scrollIndicator").style.width = scrolled + "%";
+  // }
+  // });
 </script>

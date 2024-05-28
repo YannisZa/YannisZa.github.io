@@ -4,6 +4,8 @@ title = "Bayesian online changepoint detection of point processes"
 subtitle = "Change; how much of it is happening?"
 date = "2018-06-28"
 imageURL = "/img/PG_crypto.png"
+PdfURL = "/files/dissertation.pdf"
+CodeURL = ""
 +++
 
 {{< figure src="/img/PG_crypto.png" width="800" >}}

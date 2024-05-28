@@ -4,6 +4,8 @@ title = "Bayesian hydrological modelling of road rainfall run-off"
 date = "2020-01-15"
 description = "Introduction to Bayesian hydrological modelling"
 imageURL = "/img/3d_raw_road_view.png"
+pdfURL = "/files/mini_project_censored.pdf"
+CodeURL = "https://github.com/YannisZa/bayesian-hydrological-modeling"
 +++
 
 {{< figure src="/img/3d_raw_road_view.png" width="800" >}}

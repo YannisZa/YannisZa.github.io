@@ -11,10 +11,10 @@ title = "News"
     <td>June 2024</td>
     <td> Participated in the <a href="https://summerschool.eitdigital.eu/deep-tech-entrepreneurship-and-smart-grid", target="_blank"><i>Deep Tech Entrepreneurship and Smart Grid Summer School</i></a>. </td>
   </tr> -->
-  <tr>
+  <!-- <tr>
     <td>March 2024</td>
     <td>Read our <a href="https://medium.com/@yzachos", target="_blank"><i>article on Medium</i></a> about the release of our new Python package for generating Neural Spatial Interaction Tables. </td>
-  </tr>
+  </tr> -->
   <tr>
     <td>January 2024</td>
     <td>Our paper<a href="https://onlinelibrary.wiley.com/doi/10.1002/sta4.656", target="_blank"><i>Table Inference for Combinatorial Origin-Destination Choices in Agent-based Population Synthesis</i></a> has been accepted to Stat!</td>

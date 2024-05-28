@@ -1,15 +1,17 @@
 /* Styling */
-
 @import "variables";
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
+// font-family: "Lato", "Lato", "Lato", serif;
 html {
-  font-family: "Lato", "Lato", "Lato", serif;
+  font-family: "Lato", Arial;
 }
+
 body {
   margin: 0;
   padding: 0;
-  background: $light-color;
   color: $dark-color;
+  background: $light-color;
   font-size: calc(1em + 0.22vw);
   box-sizing: border-box;
   line-height: 1.4;
@@ -21,13 +23,41 @@ body {
 }
 
 body.dark {
-  background: #1d2021;
   color: $light-color;
+  background: $dark-color;
 
   ::selection {
     color: $dark-color;
     background: $light-color;
   }
+}
+
+.content-left {
+  width: 30%; /* Allocate 10% of the space to the left content */
+}
+.content-right {
+  width: 70%; /* Allocate 90% of the space to the right content */
+}
+
+.center-content {
+  max-width: 1000px;
+  justify-content: left;
+  display: flex;
+  flex-wrap: wrap;
+  // flex: 1 1 auto; /* Equal distribution of remaining space */
+  min-width: 0; /* Allow items to shrink */
+  margin: 20px auto; /* Adjust margin for spacing */
+  // text-align: center;
+  // align-items: center;
+  position: relative;
+  width: 40% auto;
+}
+
+.left-align {
+  justify-content: left;
+  display: flex;
+  text-align: left;
+  align-items: left;
 }
 
 .verbatim {
@@ -45,16 +75,15 @@ body.dark {
   margin: 0 auto;
   display: flex;
   flex-wrap: wrap; /* Allow items to wrap to the next line */
-  text-align: center;
-  align-items: center;
+  // align-items: center;
   justify-content: space-around;
   overflow: visible;
   position: relative;
 }
 
-.social,
-.nav,
-.color-scheme {
+.nav {
+  display: flex;
+  flex-wrap: wrap;
   flex: 1 1 auto; /* Equal distribution of remaining space */
   min-width: 0; /* Allow items to shrink */
   margin: 20px auto; /* Adjust margin for spacing */
@@ -65,23 +94,36 @@ body.dark {
 }
 
 .social {
-  margin: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 auto; /* Equal distribution of remaining space */
+  margin-top: 7px;
   text-align: center;
   align-items: center;
   position: relative;
   justify-content: space-between;
   a {
-    text-decoration: none;
-    margin: 0;
+    background: inherit;
     color: $primary-accent-color;
+    padding: 0px;
+    text-decoration: none;
+    border-radius: 0px;
+  }
+  a:hover {
+    background: inherit;
+    color: $primary-accent-color;
+    text-decoration: none;
+    padding: 0px;
+    border: 0px solid $primary-accent-color;
+    animation: blueToWhiteSVG 0.4s linear;
   }
 }
 
-.gotopbutton,
+.readmorebutton,
 .nav {
-  margin: 5px;
-  // margin: 20px 50px auto;
+  cursor: pointer;
   a {
+    color: $light-color;
     background: $primary-accent-color;
     background: linear-gradient(
       90deg,
@@ -90,24 +132,42 @@ body.dark {
     );
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$primary-accent-color",endColorstr="#0a8fa8",GradientType=1);
     padding: 10px;
-    color: $light-color;
     text-decoration: none;
     border-radius: 3px;
     margin: 5px;
   }
   a:hover {
-    background: #fff;
     padding: 8px;
-    color: $primary-accent-color;
     text-decoration: none;
     border: 2px solid $primary-accent-color;
     animation: blueToWhite 0.4s linear;
   }
 }
 
+.dark .readmorebutton a {
+  color: $dark-color;
+}
+.dark .nav a {
+  color: $dark-color;
+}
+
 .color-scheme {
-  width: 20% auto;
-  margin-inline-start: 0; /* Reset margin for this div */
+  // width: 0%;
+  // text-align: justify;
+  text-align: right;
+  align-items: right;
+  // flex: 1 1 auto; /* Equal distribution of remaining space */
+  // margin: 0 auto;
+  // align-items: right;
+  // position: relative;
+  // max-width: 1000px;
+  // margin-left: auto;
+  // margin-right: 0;
+  // left: 0%;
+  // margin-right: 0%;
+  // width: 80% auto;
+  // min-width: 0; /* Allow items to shrink */
+  // margin-inline-start: 0;
 }
 
 .name {
@@ -130,16 +190,10 @@ sup a {
   color: $primary-accent-color;
 }
 
-.dark .link,
-.dark a {
-  color: gray;
-  background-color: transparent;
+.dark .link {
+  color: $primary-accent-color;
+  background-color: $dark-color;
   text-decoration: none;
-}
-
-.content {
-  margin-top: 10px;
-  border-top: 2px #808080 solid;
 }
 
 .line {
@@ -168,26 +222,39 @@ li {
 
 .checkbox {
   width: 33%;
-  float: left;
-  text-align: center;
-  align-items: center;
+  float: right;
+  text-align: right;
+  align-items: right;
   position: relative;
   opacity: 0;
-  position: absolute;
 }
+
 .page-header {
   display: flex;
   align-items: center;
 }
 .page-title {
-  margin: 5px 0px;
+  text-align: left;
+  margin: 0px 25px auto;
   overflow-wrap: break-word;
   hyphens: manual;
-  font-family: serif;
 }
 
-.research-dets {
-  margin: 0px 0px 5px 0px;
+.text-content {
+  // margin-top: 10px;
+  // border-top: 2px #808080 solid;
+  text-align: left;
+  text-align: justify;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  // hyphens: manual;
+}
+
+.pubdate {
+  font-style: italic;
+  margin: 0px 25px auto;
+  text-align: justify;
+  // margin: 0px 0px 5px 0px;
 }
 
 .tags {
@@ -209,35 +276,20 @@ li {
   margin-right: 3px;
 }
 
-.research-item {
-  max-width: 1000px;
-  margin: 5px 0;
-}
-
-.well h5,
-.well h4,
-.well h3,
-.well p {
-  margin: 5px 0px;
-}
-.well h3 {
-  font-family: Lato;
-}
-
 .label {
-  background-color: #282828;
+  background-color: $primary-accent-color;
   border-radius: 50px;
   cursor: pointer;
   display: flex;
-  margin-left: 66%;
-  align-items: center;
-  float: left;
+  margin: 20px auto; /* Adjust margin for spacing */
+  align-items: right;
+  text-align: right;
+  float: right;
   justify-content: space-between;
   padding: 5px;
   height: 10px;
   width: 30px;
   transform: scale(1.5);
-  margin-top: 10px;
   .ball {
     background-color: #fff;
     border-radius: 50%;
@@ -252,7 +304,7 @@ li {
   svg {
     height: 12px;
     width: 12px;
-    color: #f39c12;
+    color: black;
   }
 }
 
@@ -275,37 +327,10 @@ li {
   margin: auto;
 }
 
-.shortbio {
-  margin: auto;
-  display: flex;
-  align-items: flex-start;
-  text-align: left;
-  vertical-align: top;
-  max-width: 1000px;
-}
-
-.education,
-.research_interests,
-.skills {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start; /* Align items to the start */
-  margin: 0 20px; /* Adjust margin for spacing between sections */
-}
-
-.education {
-  width: 41%;
-}
-
-.research_interests {
-  width: 26%;
-}
-
-.skills {
-  width: 30%;
-}
-
-.intro {
+.bio,
+.intro,
+.experience,
+.publications {
   margin: 0 auto;
   display: flex;
   flex-direction: row;
@@ -318,7 +343,18 @@ li {
   position: relative;
 }
 
+.experience,
+.publications {
+  width: 100%;
+  justify-content: space-between;
+}
+
+
 .intro p {
+  text-align: justify;
+}
+
+.bio p {
   text-align: justify;
 }
 
@@ -339,8 +375,11 @@ li {
   border-radius: 200px;
   flex: 1 1 auto; /* Equal distribution of remaining space */
   height: 400px auto;
-  text-align: left;
-  align-items: left;
+  width: calc(max(200px + 2vh));
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  align-items: center;
   position: relative;
 }
 
@@ -361,11 +400,21 @@ blockquote {
 }
 
 .go-back,
-.go-home {
-  color: inherit;
+.go-home,
+.research-icon {
+  color: $primary-accent-color;
+  background-color: inherit;
   text-decoration: none;
   display: flex;
+  margin: auto 10px auto 25px;
+}
+.go-back {
   margin: auto 10px auto 0px;
+}
+.research-icon {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 blockquote {
@@ -432,42 +481,6 @@ pre {
 code {
   background: #2c2c2c;
   color: $light-color;
-}
-
-@media screen and (max-width: 2000px) {
-  html {
-    font-size: 1em;
-  }
-  .main {
-    width: 90%;
-  }
-  .tags,
-  .research-title {
-    margin: 0;
-  }
-  .page-header {
-    flex-wrap: wrap;
-  }
-  #footer p {
-    width: 100%;
-  }
-  /* New styles for the image allocation */
-  .research-content {
-    display: flex;
-    align-items: center; /* Ensure alignment at the top */
-  }
-  .content-left {
-    width: 25%; /* Allocate 10% of the space to the left content */
-  }
-  .content-right {
-    width: 75%; /* Allocate 90% of the space to the right content */
-  }
-  .research-image {
-    max-width: 100%; /* Ensure the image does not exceed its container width */
-    height: auto; /* Maintain aspect ratio */
-    // max-height: 100%;
-    // width: auto;
-  }
 }
 
 .back-transition {
@@ -540,38 +553,263 @@ tfoot td {
   font-weight: bold;
 }
 
-/* Define your custom styles for the education section */
-.education-list {
-  list-style: none;
-  padding: 0;
+@keyframes blueToWhiteSVG {
+  0% {
+    background: inherit;
+    color: $light-color;
+  }
+  100% {
+    background: inherit;
+    color: $primary-accent-color;
+  }
 }
 
-.education-item {
-  margin-bottom: 20px;
+.readmorebutton {
+  margin-top: 50px;
 }
 
-.university-icon {
-  // display: flex;
-  // justify-content: center;
-  width: 10%; /* Set the width of the icons */
-  height: auto;
-  // margin-left: auto;
-  margin-right: 1px;
-  text-align: center;
-  vertical-align: middle;
+.bio {
+  display: none;
+}
+
+#dynamic_svg {
+  all: inherit;
+}
+#dynamic_svg {
+  display: none;
+}
+
+.draw_path {
+  stroke-dasharray: 1000;
+  animation: 3s ease forwards;
+  stroke: $fourth-accent-color;
+  stroke-width: "0";
+  overflow: auto;
+  // align-items: center;
+  // position: relative;
+  // width: 20px;
+  // background-color: $primary-accent-color;
+  // fill: $primary-accent-color;
 }
 
 .gotopbutton {
-  display: flex;
-  flex-direction: column;
   justify-content: space-around;
-  align-items: center;
-  text-align: center;
   border: none;
-  margin: 20px auto 20px auto;
-  width: 100%;
+  flex-direction: column;
   flex: 1 1 auto; /* Equal distribution of remaining space */
-  text-align: center;
-  align-items: center;
   position: relative;
+  display: none;
+  width: 40px;
+  height: 45px;
+  cursor: pointer;
+  margin: 20px auto 20px auto;
+  a {
+    background: inherit;
+    color: $primary-accent-color;
+    padding: 0px;
+    text-decoration: none;
+    border-radius: 0px;
+  }
+  a:hover {
+    background: inherit;
+    color: $primary-accent-color;
+    text-decoration: none;
+    padding: 0px;
+    border: 0px solid $primary-accent-color;
+    animation: blueToWhiteSVG 0.4s linear;
+  }
+}
+
+.a2a_button {
+  display: inline-block;
+  width: 40px;
+  height: 35px;
+  margin: 5px;
+  border-radius: 50%;
+}
+
+.research-items-list {
+  max-width: 1000px; /* Limit the maximum width of the list */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  // display: flex;
+  // flex-wrap: wrap;
+  // flex-direction: row;
+  // align-items: center; /* Ensure alignment at the top */
+  // text-align: left;
+  // overflow: clip;
+  // position: relative;
+  margin-top: 30px;
+}
+
+.research-summary {
+  text-align: justify;
+  margin-left: 30px;
+  overflow: hidden;
+}
+
+.research-summary h5,
+.research-summary h3,
+.research-summary p {
+  margin: 0px;
+}
+
+// .research-summary h3,
+// .research-summary h5 {
+// overflow: hidden; /* Hide overflowing content */
+// text-overflow: ellipsis; /* Display ellipsis for overflowing text */
+// white-space: nowrap;
+// }
+
+.research-description {
+  margin-top: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-wrap: break-word;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4; /* number of lines to show */
+}
+
+.research-image {
+  max-width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
+.bio-items {
+  max-width: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: left;
+}
+
+.education-image,
+.work-image {
+  max-width: 160px;
+  max-height: 160px;
+  display: inline-block;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.education-text,
+.work-text {
+  display: block;
+  text-align: justify;
+  margin-left: 0;
+  overflow: hidden;
+  background: $fourth-accent-color;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="$primary-accent-color",endColorstr="#0a8fa8",GradientType=1);
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 30px;
+  .experience h2,
+  .experience h3,
+  .experience h4 {
+    margin: 0px;
+  }
+  .experience-detailed-text {
+    display: none;
+    ul {
+      list-style: circle fill;
+      padding: 10px;
+      margin-left: 10px;
+    }
+  }
+}
+
+.dark .education-text h2,
+.dark .work-text h2,
+h3,
+h4,
+li {
+  color: $dark-color;
+}
+
+.education-text:hover,
+.work-text:hover {
+  .experience-detailed-text {
+    display: block;
+  }
+}
+
+.education-image-to-text-connector-horrizontal,
+.work-image-to-text-connector-horrizontal {
+  height: 4px;
+  background-color: $fourth-accent-color;
+}
+.image-to-text-connector-vertical {
+  width: 4px;
+  background-color: $fourth-accent-color;
+}
+
+.education-timeline-connector-vertical,
+.work-timeline-connector-vertical {
+  width: 4px;
+  background-color: $fourth-accent-color;
+}
+
+
+
+/*================================ Media changes ================================*/
+
+@media screen and (max-width: 2000px) {
+  html {
+    font-size: 1em;
+  }
+  .main {
+    width: 90%;
+  }
+  .tags,
+  .research-title {
+    margin: 0;
+  }
+  .page-header {
+    flex-wrap: wrap;
+  }
+  #footer p {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .topbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: stretch; /* Stretch items to full width */
+  }
+
+  .social,
+  .nav {
+    flex: 0 1 100%; /* Take full width on smaller screens */
+  }
+
+  .experience {
+    flex-direction: column;
+  }
+  .education-image-to-text-connector-horrizontal,
+  .work-image-to-text-connector-horrizontal {
+    margin: 0px;
+    display: none;
+  }
+  // .image-to-text-connector-vertical {
+  //   display: flex;
+  // }
+}
+
+/* Light theme media query */
+@media (prefers-color-scheme: light) {
+  .addtoany .a2a_button .a2a_kit .a2a_kit_size_26 .a2a_default_style {
+    color: $primary-accent-color; /* Change text color in light mode */
+    background-color: $light-color; /* Change background color in light mode */
+  }
+}
+
+/* Dark theme media query */
+@media (prefers-color-scheme: dark) {
+  .addtoany .a2a_button .a2a_kit .a2a_kit_size_26 .a2a_default_style {
+    color: $primary-accent-color; /* Change text color in dark mode */
+    background-color: $dark-color; /* Change background color in dark mode */
+  }
 }

@@ -1,16 +1,17 @@
-// Get the button:
-let mybutton = document.getElementById("gotopbutton");
-
 // When the user scrolls down 20px from the top of the document, show the button
 window.onscroll = function () {
   scrollFunction();
 };
 
 function scrollFunction() {
-  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    mybutton.style.display = "block";
+  // Get the button:
+  let scrollToTopBtn = document.getElementById("gototop");
+  // var scrollableHeight =
+  //   document.documentElement.scrollHeight - window.innerHeight;
+  if (window.scrollY > 0) {
+    scrollToTopBtn.style.display = "block";
   } else {
-    mybutton.style.display = "none";
+    scrollToTopBtn.style.display = "none";
   }
 }
 
@@ -20,7 +21,7 @@ function topFunction() {
 }
 
 function scrollToTop(duration) {
-  const startingY = window.pageYOffset;
+  const startingY = window.scrollY;
   const startTime = Date.now();
 
   function step() {

@@ -36,7 +36,7 @@ metaDataFormat= "yaml"
   img_title = ""
   icon = "img/icon_hu41d8108e0a3a94dc63cb93224846b6ff_203010_512x512_fill_lanczos_center_2.png"
   description= """
-  I am a final year PhD student in the interdisciplinary <a href=\"https://www.fibe-cdt.eng.cam.ac.uk/\", target=\"_blank\"> CDT in Future Infrastructure and Built Environment</a> at the University of Cambridge co-supervised by <a href=\"https://en.wikipedia.org/wiki/Mark_Girolami\", target=\"_blank\">Professor Mark Girolami</a> and <a href=\"https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/damoulas/\", target=\"_blank\">Professor Theodoros Damoulas</a> and co-funded by <a href=\"https://www.arup.com/\", target=\"_blank\">Arup</a> and <a href=\"https://www.ukri.org/councils/epsrc/\", target=\"_blank\">EPSRC</a>. My research focuses on eliciting individual agent dynamics from aggregate data using Markov Bases, Markov Chain Monte Carlo, and Physics-informed ML. I am passionate about developing Computational Statistics and Machine Learning models for industry-relevant Research and Development.
+  I am a final year PhD student in the interdisciplinary <a href=\"https://www.fibe-cdt.eng.cam.ac.uk/\", target=\"_blank\"> CDT in Future Infrastructure and Built Environment</a> at the University of Cambridge co-supervised by <a href=\"https://en.wikipedia.org/wiki/Mark_Girolami\", target=\"_blank\">Professor Mark Girolami</a> and <a href=\"https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/damoulas/\", target=\"_blank\">Professor Theodoros Damoulas</a> and co-funded by <a href=\"https://www.arup.com/\", target=\"_blank\">Arup</a> and <a href=\"https://www.ukri.org/councils/epsrc/\", target=\"_blank\">EPSRC</a>. My research focuses on eliciting individual agent dynamics from aggregate data using Markov Bases, Markov Chain Monte Carlo, and Physics-informed Machine Learning. I am passionate about developing Computational Statistics and Probabilistic Machine Learning models for industry-relevant Research and Development.
   """
   licenseUrl = ""
 
@@ -60,6 +60,120 @@ metaDataFormat= "yaml"
   [[params.social]]
     name = "orcid"
     url = "https://orcid.org/0000-0002-7503-2117"
+
+
+  [[params.education]]
+    identifier = "cambridge_phd"
+    image = "cambridge.png"
+    institution  = "University of Cambridge"
+    degree       = "PhD in Computational Statistics"
+    marks       = ""
+    date        = "11/2020 - Present"
+    details    = [
+      "Thesis: Probabilistic Inference in Agent-Based Models: Advancements in Population Synthesis and Simulation.",
+      "Collaborated with Arup's City Modelling Lab."
+    ]
+    weight     = 10
+
+  [[params.education]]
+    identifier = "cambridge_mres"
+    image = "cambridge.png"
+    institution  = "University of Cambridge"
+    degree       = "MRes in Future Infrastructure and Built Environment"
+    marks       = "Distinction"
+    date        = "10/2019 - 11/2020"
+    details    = [
+      "Thesis: Stochastic modelling of urban travel demand using Metropolis Hastings and Hamiltonian Monte Carlo (79%).",
+    	"Courses: Computational Statistics and Machine Learning (83%), Research methods (79%).",
+    ]
+    weight     = 20
+
+  [[params.education]]
+    identifier = "warwick_bsc"
+    image = "warwick.png"
+    institution  = "University of Warwick"
+    degree       = "BSc in Data Science"
+    marks       = "1st class"
+    date        = "10/2015 - 07/2018"
+    details    = [
+      "Thesis: Bayesian online change-point detection for time series segmentation and forecasting in non-stationary point processes (79%).",
+      "Courses: Machine Learning (73%), Mathematical Statistics (79%), Topics in Data Science (82%), Artificial Intelligence (72%)."
+    ]
+    weight     = 30
+  
+  [[params.education]]
+    identifier = "anatolia_high_school"
+    image = "anatolia.png"
+    institution  = "Anatolia College"
+    degree       = "International Baccalaureate"
+    marks       = "39/45 - top 7% globally"
+    date        = "09/2013 - 07/2015"
+    details    = [
+      "Extended essay on stock price forecasting using Statistics (35/36).",
+      "Courses: Physics (7/7), Mathematics (6/7), Business Management (6/7)."
+    ]
+    weight     = 40
+    
+  [[params.work]]
+    identifier = "cervest"
+    image = "cervest.png"
+    company  = "Cervest Ltd (now Mitiga Solutions)"
+    position       = "Statistical Scientist"
+    date        = "09/2018  -  07/2019"
+    location    = "London, UK"
+    responsibilities    = [
+      "Led the following research projects.",
+      "Designed and developed data acquisition infrastructures using Python.",
+      "Engaged with clients and investors to facilitate science communication."
+    ]
+    weight     = 10
+
+  [[params.work]]
+    identifier  = "eurobank"
+    image       = "eurobank.png"
+    company     = "Eurobank Private Bank Luxembourg"
+    position    = "Investment Advisory Intern"
+    date        = "06/2018  -  08/2018"
+    location    = "Athens, GR"
+    responsibilities = [
+      "Derived optimal portfolios using efficient frontier theory with diversification and volatility constraints using R.",
+      "Designed, developed, and deployed a web application for portfolio management."
+    ]
+    weight      = 20
+
+  [[params.work]]
+    identifier  = "iqom"
+    image       = "iqom.png"
+    company     = "iQom Ltd (now Epsilon Net)"
+    position    = "Data Analyst Intern"
+    date        = "08/2016  -  09/2018"
+    location    = "Thessaloniki, GR"
+    responsibilities = [
+      "Performed exploratory data analysis of customer relationship management data using R and communicated results to management.",
+      "Modelled call arrival times using homogeneous Poisson processes."
+    ]
+    weight      = 30
+
+  [[params.publications]]
+    identifier = "ticodm"
+    title      = "Table Inference for Combinatorial Origin-destination Choices in Agent-based Population Synthesis"
+    authors    = "Ioannis Zachos, Theodoros Damoulas, Mark Girolami"
+    link       = ""
+    year       = "2024"
+    venue      = "Stat"
+    weight     = 10
+
+[publications]
+  pubtypes = [
+    'Uncategorized',  # 0
+    'Conference paper',  # 1
+    'Journal article',  # 2
+    'Manuscript',  # 3
+    'Report',  # 4
+    'Book',  # 5
+    'Book section'  # 6
+  ]
+
 
 
 [params.style]
@@ -99,6 +213,7 @@ metaDataFormat= "yaml"
     name       = "Reading"
     url        = "reading/"
     weight     = 50
+
 
 [markup]
   defaultMarkdownHandler = "goldmark"

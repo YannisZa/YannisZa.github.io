@@ -3,3 +3,4 @@ resources/_gen/assets/scss/sass/main.scss_511aa33e99371f93fbf403479ebfd32e.json
 .hugo_build.lock
 .gitmodules
 mywebsite.code-workspace
+public/**

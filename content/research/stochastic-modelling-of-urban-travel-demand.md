@@ -4,6 +4,8 @@ title = "Stochastic modelling of urban travel demand"
 subtitle = "Bayesian inversion of spatial interaction models"
 date = "2020-08-14"
 imageURL = "/img/london_map_edges.jpg"
+PdfURL = "/files/mres_project.pdf"
+CodeURL = "https://github.com/YannisZa/stochastic-travel-demand-modelling"
 +++
 
 {{< figure src="/img/london_map_edges.jpg" width="800" >}}
