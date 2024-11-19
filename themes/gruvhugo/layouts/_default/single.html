@@ -1,0 +1,91 @@
+{{define "main"}} 
+
+<div class="center-content">
+  <div class="page-header a2a_kit a2a_kit_size_26 a2a_default_style">
+    {{ partial "gohome.html" . }} {{ partial "goback.html" . }} {{ partial
+    "a2a.html" . }}
+  </div>
+  <div class="page-title">
+    <h2>{{.Title}}</h2>
+  </div>
+  {{ if .Params.imageURL }}
+  <div style = "width: 100%">
+    <div style="float: left; margin-right: 20px; margin-bottom: 10px; max-width: 30%; height: auto;">
+      <img
+          src="{{ .Params.imageURL }}"
+          alt=""
+          class="project-image"
+          id="projectimage" />
+    </div>
+    <div style="text-align: justify;">
+      {{ .Content }}
+    </div>
+  </div>
+  {{ else }}
+    <div class="text-content">
+      {{ .Content }}
+    </div>
+  {{ end }}
+
+  {{ if .Params.VideoURL }}
+    <div class="video-container" style="height: 500px;">
+      <iframe 
+        width="50%" 
+        aspect-ratio="16 / 9"
+        src="https://www.youtube.com/embed/Rv9sNkG5N-0?si=wLfwyxteJiUVYOb_" 
+        title="Video Explainer" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+      </iframe>
+    </div>
+  {{ end }}
+
+  {{ if and (and (and (.Params.PdfURL) (.Params.CodeURL)) (.Params.BibID)) (.Params.VideoURL) }}
+    <div style="text-align: justify;">
+      You can read the full {{.Params.type}} <b><a href="{{ .Params.PdfURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>, find the code <b><a href="{{ .Params.CodeURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>, cite the {{.Params.type}} <b><a href="{{(printf "/individual_citations/%s.bib" .Params.BibID) | absURL}}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b> and watch the video explainer <b><a href="{{ .Params.VideoURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>.
+    </div>
+  {{ else if and (and (.Params.PdfURL) (.Params.CodeURL)) (.Params.BibID) }}
+    <div style="text-align: justify;">
+      You can read the full {{.Params.type}} <b><a href="{{ .Params.PdfURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>, find the code <b><a href="{{ .Params.CodeURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>, and cite the {{.Params.type}} <b><a href="{{(printf "/individual_citations/%s.bib" .Params.BibID) | absURL}}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>.
+    </div>
+  {{ else if and (and (.Params.PdfURL) (.Params.CodeURL)) (.Params.VideoURL) }}
+    <div style="text-align: justify;">
+      You can read the full {{.Params.type}} <b><a href="{{ .Params.PdfURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>, find the code <b><a href="{{ .Params.CodeURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b> and watch the video explainer <b><a href="{{ .Params.VideoURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>.
+    </div>
+  {{ else if and (and (.Params.PdfURL) (.Params.BibID)) (.Params.VideoURL) }}
+    <div style="text-align: justify;">
+      You can read the full {{.Params.type}} <b><a href="{{ .Params.PdfURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>, cite the {{.Params.type}} <b><a href="{{(printf "/individual_citations/%s.bib" .Params.BibID) | absURL}}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b> and watch the video explainer <b><a href="{{ .Params.VideoURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>.
+    </div>
+  {{ else if and (and (.Params.CodeURL) (.Params.BibID)) (.Params.VideoURL) }}
+    <div style="text-align: justify;">
+      You can find the code <b><a href="{{ .Params.CodeURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>, cite the {{.Params.type}} <b><a href="{{(printf "/individual_citations/%s.bib" .Params.BibID) | absURL}}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b> and watch the video explainer <b><a href="{{ .Params.VideoURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>.
+    </div>
+  {{ else if and (.Params.PdfURL) (.Params.CodeURL) }}
+    <div style="text-align: justify;">
+      You can read the full {{.Params.type}} <b><a href="{{ .Params.PdfURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b> and find the code <b><a href="{{ .Params.CodeURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>.
+    </div>
+  {{ else if and (.Params.PdfURL) (.Params.BibID) }}
+    <div style="text-align: justify;">
+      You can read the full {{.Params.type}} <b><a href="{{ .Params.PdfURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b> and cite it <b><a href="{{(printf "/individual_citations/%s.bib" .Params.BibID) | absURL}}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>.
+    </div>
+  {{ else if and (.Params.CodeURL) (.Params.BibID) }}
+    <div style="text-align: justify;">
+      You can find the code here <b><a href="{{ .Params.CodeURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b> and cite the {{.Params.type}} <b><a href="{{(printf "/individual_citations/%s.bib" .Params.BibID) | absURL}}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>.
+    </div>
+  {{ else if .Params.PdfURL }}
+    <div style="text-align: justify;">
+      You can read the full {{.Params.type}} <b><a href="{{ .Params.PdfURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>.
+    </div>
+  {{ else if .Params.CodeURL }}
+    <div style="text-align: justify;">
+      You can find the code <b><a href="{{ .Params.CodeURL }}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>.
+    </div>
+  {{ else if .Params.BibID }}
+    <div style="text-align: justify;">
+      You can cite the {{.Params.type}} <b><a href="{{(printf "/individual_citations/%s.bib" .Params.BibID) | absURL}}" target="_blank" rel="noopener" style="text-decoration: none;">here</a></b>.
+    </div>
+  {{ end }}
+</div>
+
+{{end}}

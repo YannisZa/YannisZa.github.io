@@ -1,0 +1,37 @@
+{{define "main"}}
+<div class="center-content">
+  <div class="left-align">
+    <div class="page-header a2a_kit a2a_kit_size_26 a2a_default_style">
+      {{ partial "gohome.html" . }} {{ partial "goback.html" . }} {{ partial
+      "a2a.html" . }}
+    </div>
+    <div class="page-title">
+      <h2>{{.Title}}</h2>
+    </div>
+  </div>
+  <!-- List all tags -->
+  {{if eq .Kind "taxonomyTerm"}} 
+    {{range $key, $value := .Data.Terms.Alphabetical}}
+      <span
+        ><a
+          style="color: white; text-decoration: none"
+          href='{{ "tags/" | absURL }}{{ $value.Name | lower }}'
+          >{{ $value.Name }} ({{.Count }})</a
+        ></span
+      >
+    {{end}} 
+  {{else}} 
+    {{ range $index, $page := where .Data.Pages "Section" .Section }}
+    {{ $params := dict "root" $ "page" $page }}
+    {{ $widget_name := ( or $page.Params.widget "" ) }}
+      {{if ne $widget_name "" }}
+        {{ $widget := printf "widgets/%s.html" ($widget_name) }} 
+        {{ partial $widget $params }}
+      {{ else }}
+        {{ partial $.Section . }}
+      {{ end }}
+      
+    {{end}}
+  {{end}} 
+</div>
+{{end}}

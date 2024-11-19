@@ -1,0 +1,108 @@
+<a
+  class="a2a_dd"
+  href="https://www.addtoany.com/share?url={{.Site.BaseURL}}"></a>
+<script>
+  var a2a_config = a2a_config || {};
+  a2a_config.onclick = 1;
+  a2a_config.icon_color = "#008dda,white";
+  // Add event listener for theme change
+  document.addEventListener("themeChange", function (event) {
+    // console.log("Theme changed to:", event.detail);
+    if (event.detail == "dark") {
+      a2a_config.icon_color = "#008dda,#1d2021";
+    } else {
+      a2a_config.icon_color = "#008dda,white";
+    }
+    // console.log(a2a_config.icon_color);
+    // Reinitialize or update AddToAny buttons to reflect the new configuration
+    if (a2a) a2a.init_all();
+  });
+  a2a_config.prioritize = ["copy_link", "email", "x", "threads"];
+  a2a_config.exclude_services = [
+    "amazon_wish_list",
+    "aol_mail",
+    "balatarin",
+    "bibsonomy",
+    "blogger",
+    "blogmarks",
+    "bookmarks_fr",
+    "box_net",
+    "buffer",
+    "diary_ru",
+    "diaspora",
+    "digg",
+    "diigo",
+    "douban",
+    "draugiem",
+    "evernote",
+    "facebook",
+    "fark",
+    "flipboard",
+    "folkd",
+    "google_gmail",
+    "google_classroom",
+    "google_translate",
+    "hacker_news",
+    "hatena",
+    "houzz",
+    "instapaper",
+    "kakao",
+    "known",
+    "line",
+    "linkedin",
+    "livejournal",
+    "mail_ru",
+    "mastodon",
+    "mendeley",
+    "meneame",
+    "facebook_messenger",
+    "sms",
+    "mewe",
+    "mix",
+    "mixi",
+    "myspace",
+    "odnoklassniki",
+    "outlook_com",
+    "papaly",
+    "pinboard",
+    "pinterest",
+    "plurk",
+    "pocket",
+    "print",
+    "printfriendly",
+    "pusha",
+    "kindle_it",
+    "qzone",
+    "raindrop_io",
+    "reddit",
+    "rediff",
+    "mypage",
+    "refind",
+    "sina_weibo",
+    "sitejot",
+    "skype",
+    "slashdot",
+    "snapchat",
+    "stocktwits",
+    "svejo",
+    "symbaloo_bookmarks",
+    "microsoft_teams",
+    "telegram",
+    "threema",
+    "trello",
+    "tumblr",
+    "twiddla",
+    "twitter",
+    "typepad_post",
+    "viber",
+    "vk",
+    "wechat",
+    "whatsapp",
+    "wordpress",
+    "wykop",
+    "xing",
+    "yahoo_mail",
+    "yummly",
+  ];
+</script>
+<script async src="https://static.addtoany.com/menu/page.js"></script>
