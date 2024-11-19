@@ -5,8 +5,6 @@ title = 'Ioannis Zachos'
 theme = 'gruvhugo'
 # Number of posts per page
 pagination.pagerSize = "10" 
-#disqusShortname = "" # Enable comments by entering your Disqus shortname
-googleAnalytics = "G-G1VHH9QBW3" # Enable Google Analytics by entering your tracking id
 #-------------------------------------------------------------------------------
 # DEFAULT SETTINGS
 #-------------------------------------------------------------------------------
