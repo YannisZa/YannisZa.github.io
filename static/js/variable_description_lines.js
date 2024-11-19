@@ -1,6 +1,6 @@
 // Get the summary element
-var summaryElement = document.getElementById("researchsummary");
-var imageElement = document.getElementById("researchimage");
+var summaryElement = document.getElementById("projectsummary");
+var imageElement = document.getElementById("projectimage");
 
 // Get the height of the summary element
 var lineHeight = parseFloat(window.getComputedStyle(summaryElement).lineHeight);
