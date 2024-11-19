@@ -1,0 +1,6 @@
+[submodule "parse_bib"]
+	path = parse_bib
+	url = git@github.com:apetros/parse_bib.git
+[submodule "themes/gruvhugo"]
+	path = themes/gruvhugo
+	url = git@github.com:YannisZa/website.git
