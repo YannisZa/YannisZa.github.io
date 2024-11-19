@@ -170,7 +170,7 @@ metaDataFormat= "yaml"
 
   [params.research]
     date_format = "January 2006"
-    bibtex_file = 'publications'
+    bibtex_file = '/files/publications'
     pubtypes = [
       'Uncategorized',  # 0
       'Conference paper',  # 1
