@@ -400,6 +400,11 @@ body.dark {
   white-space: normal;
 }
 
+.dark .intro-name-title {
+  color: $light-color;
+  background-color: $dark-color;
+}
+
 .image {
   border-radius: 200px;
   flex: 1 1 auto; /* Equal distribution of remaining space */

@@ -1,6 +1,6 @@
 baseurl = 'https://yannisza.github.io/'
 languageCode = 'en-uk'
-title = 'Ioannis (Yannis) Zachos'
+title = 'Ioannis Zachos'
 # Default Theme
 theme = 'gruvhugo'
 # Number of posts per page
