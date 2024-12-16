@@ -1,3 +1,4 @@
+{{ $primaryAuthor := "I. Zachos" }}
 {{ $entries := .Site.Data.references }}
 <ul>
   {{ range $entries }}
@@ -7,6 +8,7 @@
         {{ $is_list := 1 }}
         {{ $title := $entry.title }}
         {{ $author := $entry.author }}
+        {{ $pubid := $entry.pubid }}
         {{ $year := $entry.year }}
         {{ $pdf_url := $entry.pdf_url }}
         {{ $id := $entry.ID }}
@@ -16,28 +18,39 @@
 
         <div class="pub-list-item" style="margin-bottom: 3rem" itemscope itemtype="http://schema.org/CreativeWork">
         
-        <div class="bib-icon">
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            viewBox="0 0 384 512"
-            x = "0px"
-            y = "0px"
-            height="20px"> 
-            <path d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-288-128 0c-17.7 0-32-14.3-32-32L224 0 64 0zM256 0l0 128 128 0L256 0zM112 256l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/>
-          </svg>
+          <!-- <div class="bib-icon">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 384 512"
+              x = "0px"
+              y = "0px"
+              height="20px"> 
+              <path d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-288-128 0c-17.7 0-32-14.3-32-32L224 0 64 0zM256 0l0 128 128 0L256 0zM112 256l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/>
+            </svg>
+          </div> -->
+        <div class="pubcontainer">
+          <div class="pubid">
+            {{ if $pubid }}
+              {{ $pubid }}
+            {{ end }}
+          </div>
+          <div class = "pubtext">
+            <span itemprop="author">
+              {{ $authorlen := (len $author) }}
+              {{ range $index, $element := $author }}
+              {{ if (eq  $element $primaryAuthor)}}
+                  <b>{{.}}</b>,
+                {{ else if (eq (add $index 1) $authorlen)}}
+                  {{.}}.
+                {{ else }}
+                  {{.}},
+                {{ end }}
+              {{ end }}
+            </span>
+            <i> {{ $title }}</i>.
+            ({{ $year }}). 
         </div>
-          <span itemprop="author">
-          {{ with $author }}
-            {{- delimit . ", " | markdownify -}}
-          {{- end -}}
-        </span>.
-        <i> {{ $title }}</i>.
-        ({{ $year }}). 
-        {{ if $entry.publisher }}
-          {{ $entry.publisher }}.
-        {{ else if $entry.journal }}
-          {{ $entry.journal }}.
-        {{ end }}
+        </div>
         <div class="pub-list-item" style=margin-bottom:1rem>
           {{ with $pdf_url }}
           <a href="{{ $pdf_url }}" target="_blank" rel="noopener" style="text-decoration: none;">
@@ -85,4 +98,3 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
 <script src="{{ .Site.BaseURL }}js/publications.js"></script>
-

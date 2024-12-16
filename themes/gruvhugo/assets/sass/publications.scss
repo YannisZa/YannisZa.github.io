@@ -82,6 +82,33 @@
   margin-right: auto;
 }
 
+
+.pubcontainer {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+  gap: 2%;
+}
+
+.pubtext {
+  flex: 4;
+  text-align: left;
+  position: relative;
+}
+
+.pubid {
+  flex: 1;
+  color: $light-color;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 5px;
+  border-color: $primary-accent-color !important;
+  background: $primary-accent-color !important;
+  text-decoration: none;
+  text-align: center;
+  // display: inline-block;
+}
+
 .pub .pub-authors {
   font-style: italic;
   line-height: 30px; /* Match share bar line height. */
