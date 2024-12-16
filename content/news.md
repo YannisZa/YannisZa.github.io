@@ -4,6 +4,10 @@ title = "News"
 
 <table>
   <tr>
+    <td>December 2024</td>
+    <th>Presented <a href="https://www.linkedin.com/feed/update/urn:li:activity:7274518007320633344/", target="_blank">our    paper</a> at NeurIPS 2024 in Vancouver, 🇨🇦.</th>
+  </tr>
+  <tr>
     <td>November 2024</td>
     <th>I have been selected as an Associate at <a href="https://www.outsmartinsight.com/", target="_blank">Outsmart Insight</a>.</th>
   </tr>
@@ -13,7 +17,7 @@ title = "News"
   </tr>
   <tr>
     <td>September 2024</td>
-    <th> Our paper <a href="https://arxiv.org/abs/2410.07352", target="_blank"><i>Generating Origin-Destination Matrices in Neural Spatial Interaction Models</i></a> has been accepted at the <a href="https://neurips.cc/Conferences/2024", target="_blank">Neural Information Processing Systems 2024</a> Conference in Vancouver! </th>
+    <th> Our paper <a href="https://arxiv.org/abs/2410.07352", target="_blank"><i>Generating Origin-Destination Matrices in Neural Spatial Interaction Models</i></a> has been accepted at the <a href="https://neurips.cc/virtual/2024/poster/94266", target="_blank">Neural Information Processing Systems 2024</a> Conference in Vancouver! </th>
   </tr>
   <tr>
     <td>January 2024</td>
