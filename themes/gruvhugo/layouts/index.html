@@ -1,0 +1,171 @@
+{{define "main"}}
+<div class="intro">
+  {{if .Site.Params.main.enabled }}
+  <div class="intro-top">
+    <img
+      class="image"
+      src="{{ .Site.Params.main.img | absURL }}"
+      title="{{	.Site.Params.main.img_title }}"
+      alt="Author's picture or avatar or logo" />
+    <ul>
+      <li class="intro-name-title">
+        <div class="name">{{ .Site.Params.main.name }}</div> 
+        <div class="subname">{{ .Site.Params.main.subname }}</div>
+        <div class="job-title">{{ .Site.Params.main.title }}</div>
+      </li>
+    </ul>
+    </div>
+    {{end}}
+    <div class="intro-bottom">
+    <p>{{ .Site.Params.main.description | safeHTML }}</p>
+    <div class="readmorebutton" id="readmore">
+      <a onclick="activateBio()" title="Read more">
+        <span id="readmoretext">Read more</span>
+      </a>
+    </div>
+  </div>
+</div>
+<div class="bio">
+  <svg
+    id="mydrawnline1"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0px"
+    y="0px"
+    width="50px"
+    xml:space="preserve">
+    <path
+      id="mydrawnpath1"
+      class="draw_path"
+      fill="#01a09e"
+      stroke-width="4"
+      stroke="#01a09e"
+      d="" />
+  </svg>
+  <h1>Professional Experience</h1>
+  <div class="bio-items" id="work_experience">
+    {{ range $i, $e := .Site.Params.experience.work}}
+    <div class="experience" id="{{ $e.identifier }}">
+      <img
+        class="work-image"
+        id="{{$e.identifier}}_image"
+        style="align-items: center"
+        src="/img/{{$e.image}}"
+        title="{{	$e.image }}"
+        alt="company image" />
+      <div class="work-image-to-text-connector-horrizontal">
+        <p class="mb-0">&nbsp;</p>
+      </div>
+      <div
+        class="work-text"
+        id="{{$e.identifier}}_text"
+        style="width: 68%">
+        <h2>
+          <a href="{{$e.url}}" target="_blank" rel="noopener noreferrer">
+            {{$e.company}}
+          </a>
+        </h2>
+        <h3>{{$e.position}}
+        <h4>{{$e.date}}, {{$e.location}}</h4>
+        <div class="experience-detailed-text">
+          <ul>
+            {{ range $ind, $ele := .responsibilities}}
+              {{ if (eq ($ele | len) 1) }}
+                <!-- If $ele is a list with exactly one item -->
+                <li>{{ index $ele 0 }}</li>
+              {{ else }}
+                <!-- If $ele is a list with multiple items -->
+                <ul>
+                  {{ range $subEle := $ele }}
+                    <li>{{ $subEle }}</li>
+                  {{ end }}
+                </ul>
+              {{ end }}
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="work-timeline-connector-vertical"></div>
+    {{ end }}
+  </div>
+  <svg
+    id="mydrawnline2"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0px"
+    y="0px"
+    width="50px"
+    xml:space="preserve">
+    <path
+      id="mydrawnpath2"
+      class="draw_path"
+      fill="#01a09e"
+      stroke-width="4"
+      stroke="#01a09e"
+      d="" />
+  </svg>
+  <h1>Education</h1>
+  <div class="bio-items" id="experience">
+    {{ range $i, $e := .Site.Params.experience.education}}
+    <div class="experience" id="{{ $e.identifier }}">
+      <img
+        class="education-image"
+        id="{{$e.identifier}}_image"
+        style="align-items: center"
+        src="/img/{{$e.image}}"
+        title="{{	$e.image }}"
+        alt="institution image" />
+      <div class="education-image-to-text-connector-horrizontal">
+        <p style="margin-bottom: 0">&nbsp;</p>
+      </div>
+      <div
+        class="education-text"
+        id="{{$e.identifier}}_text"
+        style="width: 68%">
+        <h2>
+          <a href="{{$e.url}}" target="_blank" rel="noopener noreferrer">
+            {{$e.institution}}
+          </a>
+        </h2>
+        {{if $e.marks }}
+        <h3>{{$e.degree}} (<b>{{$e.marks}}</b>)</h3>
+        {{else}}
+        <h3>{{$e.degree}}</h3>
+        {{end}}
+        <h4>{{$e.date}}</h4>
+        <div class="experience-detailed-text">
+          <ul>
+            {{ range $ind, $ele := .details}}
+            <li>{{$ele}}</li>
+            {{ end }}
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="education-timeline-connector-vertical"></div>
+    {{ end }}
+  </div> 
+  <!-- <svg
+    id="mydrawnline3"
+    version="1.1"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    x="0px"
+    y="0px"
+    width="50px"
+    xml:space="preserve">
+    <path
+      id="mydrawnpath3"
+      class="draw_path"
+      fill="#01a09e"
+      stroke-width="4"
+      stroke="#01a09e"
+      d="" />
+  </svg> -->
+<script src="{{ .Site.BaseURL }}js/sectionConnector.js"></script>
+<script src="{{ .Site.BaseURL }}js/lineConnector.js"></script>
+<script src="{{ .Site.BaseURL }}js/toggleBio.js"></script>
+{{end}}

@@ -1,0 +1,6 @@
+.hugo_build.lock
+.gitmodules
+mywebsite.code-workspace
+resources/**
+public/**
+node_modules/**

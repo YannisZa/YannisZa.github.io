@@ -1,0 +1,299 @@
+baseurl = 'https://yannisza.github.io/'
+languageCode = 'en-uk'
+title = 'Ioannis Zachos'
+# Default Theme
+theme = 'gruvhugo'
+# Number of posts per page
+pagination.pagerSize = "10" 
+#-------------------------------------------------------------------------------
+# DEFAULT SETTINGS
+#-------------------------------------------------------------------------------
+
+
+
+# Default Post Extension
+defaultExtension= "html"
+
+# Default metadata format for newly created frontmatter using
+# hugo new command. "toml", "yaml", or "json"
+metaDataFormat= "yaml"
+
+[taxonomies]
+  tag      = "tags"
+  category = "categories"
+  series   = "series"
+
+[params.main]
+  enabled = true
+  enableKatex = true
+  metaKeywords = "yannis, ioannis, zachos, machine, learning, PhD, computational, statistics, agent-based, modelling, multi-agent systems"
+  copyright = ""
+  name = "Ioannis Zachos"
+  subname = "(aka Yannis)"
+  title = "Machine Learning Scientist (PhD)"
+  img = "img/IoannisZachosnew.png"
+  img_title = ""
+  icon = "img/icon_hu41d8108e0a3a94dc63cb93224846b6ff_203010_512x512_fill_lanczos_center_2.png"
+  description= """
+  Machine Learning Scientist with a Cambridge PhD and 6 years of experience engineering AI solutions to complex problems. Expertise in solving high-dimensional data challenges using Python and Generative AI, evidenced by State-of-the-Art contributions at NeurIPS '24. Passionate about bridging the gap between R&D and production.
+  """
+  licenseUrl = ""
+
+  # I am a computational statistician passionate about developing machine learning models for industry-relevant research and development. I recently completed my PhD in computational statistics & machine learning at the Department of Engineering of the University of Cambridge supervised by <a href=\"https://en.wikipedia.org/wiki/Mark_Girolami\", target=\"_blank\">Professor Mark Girolami</a> and <a href=\"https://warwick.ac.uk/fac/sci/statistics/staff/academic-research/damoulas/\", target=\"_blank\">Professor Theodoros Damoulas</a>. I was co-funded by <a href=\"https://www.arup.com/\",target=\"_blank\">Arup</a> and <a href=\"https://www.ukri.org/councils/epsrc/\", target=\"_blank\">EPSRC</a>. My research focused on eliciting individual agent dynamics from aggregate data using Markov Chain Monte Carlo and Physics-informed ML. 
+
+ # Social icons
+  [[params.social]]
+    name = "email"
+    url  = "mailto:yzachos@gmail.com"
+
+  [[params.social]]
+    name = "linkedin"
+    url  = "https://www.linkedin.com/in/izachos/"
+
+    [[params.social]]
+    name = "github"
+    url  = "https://github.com/YannisZa"
+
+    [[params.social]]
+    name = "google_scholar"
+    url = "https://scholar.google.com/citations?user=GfymnikAAAAJ&hl=en"
+
+  [[params.social]]
+    name = "orcid"
+    url = "https://orcid.org/0000-0002-7503-2117"
+
+
+  [params.experience]
+    [[params.experience.education]]
+      identifier = "cambridge_phd"
+      image = "cambridge.png"
+      institution  = "University of Cambridge"
+      url          = "https://www.cam.ac.uk/"
+      degree       = "PhD in Computational Statistics and Machine Learning"
+      marks       = ""
+      date        = "11/2020 - 10/2025"
+      details    = [
+        "Industrial collaboration with Arup City Modelling Lab.",
+        "Lead author: NeurIPS 2024 and Stat (Wiley).",
+        "Award: Full scholarship by Arup and EPSRC.",
+        "Thesis: Inverse Problems in Agent-Based Models of Spatial Phenomena.",
+        "Supervisors: Prof. Mark Girolami and Prof. Theodoros Damoulas.",
+      ]
+      weight     = 10
+
+    [[params.experience.education]]
+      identifier = "cambridge_mres"
+      image = "cambridge.png"
+      institution  = "University of Cambridge"
+      url          = "https://www.cam.ac.uk/"
+      degree       = "MRes in Engineering"
+      marks       = "Distinction"
+      date        = "10/2019 - 11/2020"
+      details    = [
+        "Focus: Computational Statistics and Machine Learning.",
+        "Award: Full scholarship by Arup and EPSRC."
+      ]
+      weight     = 20
+
+    [[params.experience.education]]
+      identifier = "warwick_bsc"
+      image = "warwick.png"
+      institution  = "University of Warwick"
+      url          = "http://warwick.ac.uk"
+      degree       = "BSc in Data Science"
+      marks       = "1st class"
+      date        = "10/2015 - 07/2018"
+      details    = [
+        "Thesis: Bayesian online change-point detection for time series segmentation and forecasting in point processes (79%).",
+        "Courses: Machine Learning (73%), Mathematical Statistics (79%), Topics in Data Science (82%), Artificial Intelligence (72%)."
+      ]
+      weight     = 30
+  
+    # [[params.experience.education]]
+    #   identifier = "anatolia_high_school"
+    #   image = "anatolia.png"
+    #   institution  = "Anatolia College"
+    #   url          = "https://anatolia.edu.gr/en/"
+    #   degree       = "International Baccalaureate"
+    #   marks       = "39/45 - top 7% globally"
+    #   date        = "09/2013 - 07/2015"
+    #   details    = [
+    #     "Extended essay on stock price forecasting using Statistics (35/36).",
+    #     "Courses: Physics (7/7), Mathematics (6/7), Business Management (6/7)."
+    #   ]
+    #   weight     = 40
+      
+    [[params.experience.work]]
+      identifier = "arup"
+      image = "arup.png"
+      company  = "Cambridge University & Arup City Modelling Lab"
+      url         =  "https://www.arup.com/services/city-modelling-lab/"
+      position       = "Machine Learning Reasearcher"
+      date        = "10/2020  -  10/2025"
+      location    = "Cambridge, UK"
+      responsibilities    = [
+        ["Leveraged a collaborative industrial partnership to build simulation frameworks for urban planning."],
+        ["Engineered a State-of-the-Art framework for multi-agent origin-destination trip modelling leveraging Neural Stochastic Differential Equations."],
+        ["Designed and implemented a custom Markov Chain Monte Carlo sampler to solve high-dimensional inverse problems in multi-agent system simulations."],
+        ["Developed an open-source tool for synthesising origin-destination trips, enabling Arup engineers to simulate realistic transport scenarios."]
+
+      ]
+      weight     = 10
+
+
+    [[params.experience.work]]
+      identifier = "cervest"
+      image = "cervest.png"
+      company  = "Cervest Ltd (now Mitiga Solutions)"
+      url         =  "https://www.earth-scan.com/"
+      position       = "Statistical Scientist"
+      date        = "09/2018  -  07/2019"
+      location    = "London, UK"
+      responsibilities    = [
+        ["Key contributor to the 0-to-1 engineering lifecycle of an AI-powered climate intelligence platform."],
+        ["Architected and developed scalable ETL pipelines in Python to ingest, process and fuse ~10TB of multi-resolution multi-modal satellite imagery."],
+        ["Engineered and deployed spatio-temporal ML models for environmental resilience."],
+        ["Translated complex modeling results and predictions into actionable insights for investors and clients, facilitating technical due diligence."]
+      ]
+      weight     = 20
+
+    [[params.experience.work]]
+      identifier  = "eurobank"
+      image       = "eurobank.png"
+      company     = "Eurobank Private Bank Luxembourg"
+      url         =  "https://www.eurobankpb.lu/"
+      position    = "Investment Advisory Intern"
+      date        = "06/2018  -  08/2018"
+      location    = "Athens, GR"
+      responsibilities = [
+        ["Designed and deployed an R Shiny application that performs on-demand portfolio optimisation subject to diversification and volatility constraints."]
+      ]
+      weight      = 30
+
+    [[params.experience.work]]
+      identifier  = "iqom"
+      image       = "iqom.png"
+      company     = "iQom Ltd (now Epsilon Net)"
+      url         =  "https://www.iqom.gr/"
+      position    = "Data Analyst Intern"
+      date        = "08/2016  -  09/2018"
+      location    = "Thessaloniki, GR"
+      responsibilities = [
+        ["Analysed high-volume CRM data using R to model customer call arrival times using Poisson processes, optimizing support center resource allocation."]
+      ]
+      weight      = 40
+
+  [params.research]
+    date_format = "January 2006"
+    bibtex_file = '/files/publications'
+    pubtypes = [
+      'Uncategorized',  # 0
+      'Conference paper',  # 1
+      'Journal article',  # 2
+      'Manuscript',  # 3
+      'Report',  # 4
+      'Book',  # 5
+      'Book section'  # 6
+    ]
+
+
+[params.style]
+  # add path to custom CSS files here
+  custom_css = ['css/style.css']
+  # add path to custom SCSS files here
+  custom_scss = []
+
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name       = "Home"
+    url        = "./"
+    weight     = 10
+
+  [[menu.main]]
+    identifier = "news"
+    name       = "News"
+    url        = "news/"
+    weight     = 20
+
+  [[menu.main]]
+    identifier = "cv"
+    name       = "CV"
+    url        = "mailto:yzachos@gmail.com?subject=CV%20request"
+    weight     = 30
+
+  [[menu.main]]
+    identifier = "publications"
+    name       = "Publications"
+    url        = "publications/"
+    weight     = 40
+    
+  [[menu.main]]
+    identifier = "projects"
+    name       = "Projects"
+    url        = "projects/"
+    weight     = 50
+
+
+[markup]
+  defaultMarkdownHandler = "goldmark"
+  [markup.asciidocExt]
+    backend = "html5"
+    docType = "article"
+    extensions = []
+    failureLevel = "fatal"
+    noHeaderOrFooter = true
+    safeMode = "unsafe"
+    sectionNumbers = false
+    trace = false
+    verbose = true
+    workingFolderCurrent = false
+    [markup.asciidocExt.attributes]
+  [markup.blackFriday]
+    angledQuotes = false
+    footnoteAnchorPrefix = ""
+    footnoteReturnLinkContents = ""
+    fractions = true
+    hrefTargetBlank = false
+    latexDashes = true
+    nofollowLinks = false
+    noreferrerLinks = false
+    plainIDAnchors = true
+    skipHTML = false
+    smartDashes = true
+    smartypants = true
+    smartypantsQuotesNBSP = false
+    taskLists = true
+  [markup.goldmark]
+    [markup.goldmark.extensions]
+      definitionList = true
+      footnote = true
+      linkify = true
+      strikethrough = true
+      table = true
+      taskList = true
+      typographer = true
+    [markup.goldmark.parser]
+      attribute = true
+      autoHeadingID = true
+      autoHeadingIDType = "github"
+    [markup.goldmark.renderer]
+      hardWraps = false
+      unsafe = true
+      xhtml = false
+  [markup.highlight]
+    codeFences = true
+    guessSyntax = false
+    hl_Lines = ""
+    lineNoStart = 1
+    lineNos = false
+    lineNumbersInTable = true
+    noClasses = true
+    style = "monokai"
+    tabWidth = 4
+  [markup.tableOfContents]
+    endLevel = 3
+    ordered = false
+    startLevel = 2
+

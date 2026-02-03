@@ -1,0 +1,100 @@
+{{ $primaryAuthor := "I. Zachos" }}
+{{ $entries := .Site.Data.references }}
+<ul>
+  {{ range $entries }}
+    {{ range . }}
+      {{ if .}}
+        {{ $entry := . }}
+        {{ $is_list := 1 }}
+        {{ $title := $entry.title }}
+        {{ $author := $entry.author }}
+        {{ $pubid := $entry.pubid }}
+        {{ $year := $entry.year }}
+        {{ $pdf_url := $entry.pdf_url }}
+        {{ $id := $entry.ID }}
+        {{ $project_url := $entry.project_url }}
+        {{ $code_url := $entry.code_url }}
+        {{ $video_url := $entry.video_url }}
+
+        <div class="pub-list-item" style="margin-bottom: 3rem" itemscope itemtype="http://schema.org/CreativeWork">
+        
+          <!-- <div class="bib-icon">
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              viewBox="0 0 384 512"
+              x = "0px"
+              y = "0px"
+              height="20px"> 
+              <path d="M64 0C28.7 0 0 28.7 0 64L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-288-128 0c-17.7 0-32-14.3-32-32L224 0 64 0zM256 0l0 128 128 0L256 0zM112 256l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16zm0 64l160 0c8.8 0 16 7.2 16 16s-7.2 16-16 16l-160 0c-8.8 0-16-7.2-16-16s7.2-16 16-16z"/>
+            </svg>
+          </div> -->
+        <div class="pubcontainer">
+          <div class="pubid">
+            {{ if $pubid }}
+              {{ $pubid }}
+            {{ end }}
+          </div>
+          <div class = "pubtext">
+            <span itemprop="author">
+              {{ $authorlen := (len $author) }}
+              {{ range $index, $element := $author }}
+              {{ if (eq  $element $primaryAuthor)}}
+                  <b>{{.}}</b>,
+                {{ else if (eq (add $index 1) $authorlen)}}
+                  {{.}}.
+                {{ else }}
+                  {{.}},
+                {{ end }}
+              {{ end }}
+            </span>
+            <i> {{ $title }}</i>.
+            ({{ $year }}). 
+        </div>
+        </div>
+        <div class="pub-list-item" style=margin-bottom:1rem>
+          {{ with $pdf_url }}
+          <a href="{{ $pdf_url }}" target="_blank" rel="noopener" style="text-decoration: none;">
+            <button class="btn-primary">
+              PDF
+            </button>
+          </a>
+          {{ end }}
+          {{ with $id }}
+            <button class="citebutton btn-primary"
+                data-filename="{{ (printf "/individual_citations/%s.bib" $id) | absURL }}">
+            {{ "Cite" }}
+            </button>
+          {{ end }}
+          {{ with $code_url }}
+          <a href="{{ $code_url }}" target="_blank" rel="noopener" style="text-decoration: none;">
+            <button class="btn-primary">
+              Code
+            </button>
+          </a>
+          {{ end }}
+          {{ with $project_url }}
+          <a href="{{ (printf "/projects/%s" $project_url) | absURL }}" target="_blank" rel="noopener" style="text-decoration: none;">
+              <button class="btn-primary">
+                Project
+              </button>
+            </a>
+          {{ end }}
+          {{ with $video_url }}
+          <a href="{{ $video_url }}" target="_blank" rel="noopener" style="text-decoration: none;">
+              <button class="btn-primary">
+                Video
+              </button>
+            </a>
+          {{ end }}
+        </div>
+      </div>
+      {{ end }}
+    {{ end }}
+  {{ end }}
+</ul>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" integrity="sha512-3P8rXCuGJdNZOnUx/03c1jOTnMn3rP63nBip5gOP2qmUh5YAdVAvFZ1E+QLZZbC1rtMrQb+mah3AfYW11RUrWA==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.3/imagesloaded.pkgd.min.js" integrity="sha512-umsR78NN0D23AzgoZ11K7raBD+R6hqKojyBZs1w8WvYlsI+QuKRGBx3LFCwhatzBunCjDuJpDHwxD13sLMbpRA==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.2.5/jquery.fancybox.min.js" integrity="sha256-X5PoE3KU5l+JcX+w09p/wHl9AzK333C4hJ2I9S5mD4M=" crossorigin="anonymous"></script>
+<script src="{{ .Site.BaseURL }}js/publications.js"></script>
